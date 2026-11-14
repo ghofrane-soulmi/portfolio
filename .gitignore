@@ -1,0 +1,28 @@
+# Nuxt
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+.vercel
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Claude Code local settings
+.claude/settings.local.json

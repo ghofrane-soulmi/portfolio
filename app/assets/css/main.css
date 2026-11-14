@@ -1,0 +1,103 @@
+@import 'tailwindcss';
+
+/* Dark mode is driven by the `.dark` class set by @nuxtjs/color-mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Design tokens. Light values are the base; `.dark` overrides them.
+ * Contrast: text on bg >= 7:1, muted on bg >= 4.5:1, accent on bg >= 4.5:1.
+ */
+:root {
+  --c-bg: #f7f8fa;
+  --c-surface: #ffffff;
+  --c-surface-2: #eef1f4;
+  --c-border: #d9dee4;
+  --c-text: #0f172a;
+  --c-muted: #475569;
+  --c-accent: #0f766e; /* teal-700 */
+  --c-accent-strong: #115e59;
+  --c-accent-soft: #ccfbf1;
+  --c-on-accent: #ffffff;
+}
+
+.dark {
+  --c-bg: #0b0f14;
+  --c-surface: #11171e;
+  --c-surface-2: #18202a;
+  --c-border: #253040;
+  --c-text: #e6edf3;
+  --c-muted: #9aa7b4;
+  --c-accent: #2dd4bf; /* teal-400 */
+  --c-accent-strong: #5eead4;
+  --c-accent-soft: #0f2e2b;
+  --c-on-accent: #04201d;
+}
+
+@theme inline {
+  --color-bg: var(--c-bg);
+  --color-surface: var(--c-surface);
+  --color-surface-2: var(--c-surface-2);
+  --color-border: var(--c-border);
+  --color-text: var(--c-text);
+  --color-muted: var(--c-muted);
+  --color-accent: var(--c-accent);
+  --color-accent-strong: var(--c-accent-strong);
+  --color-accent-soft: var(--c-accent-soft);
+  --color-on-accent: var(--c-on-accent);
+
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* keep anchors clear of the sticky header */
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-bg text-text font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    @apply bg-accent text-on-accent;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Scroll reveal (see app/plugins/reveal.ts) */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
