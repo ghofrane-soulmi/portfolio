@@ -6,6 +6,8 @@ export default withNuxt(
   {
     rules: {
       'vue/multi-word-component-names': 'off',
+      // Optional TS props are `undefined` by design.
+      'vue/require-default-prop': 'off',
     },
   },
   // Architecture rule: UI code must read data only through composables,

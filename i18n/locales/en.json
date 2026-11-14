@@ -1,5 +1,115 @@
 {
   "common": {
-    "present": "Present"
+    "present": "Present",
+    "skipToContent": "Skip to content",
+    "backToTop": "Back to top",
+    "placeholder": "Placeholder"
+  },
+  "nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "theme": {
+    "toDark": "Switch to dark theme",
+    "toLight": "Switch to light theme"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "viewProjects": "View projects",
+    "downloadCv": "Download CV",
+    "contactMe": "Get in touch"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Building production web apps, end to end",
+    "languages": "Languages",
+    "location": "Based in"
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Tools I work with"
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Where I've worked"
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "featuredTitle": "Selected case studies",
+    "viewAll": "View all projects",
+    "readCaseStudy": "Read case study",
+    "allTitle": "All projects",
+    "allIntro": "Client work across HR technology, travel operations and financial services, written up as case studies.",
+    "filters": {
+      "label": "Filter projects",
+      "category": "Category",
+      "technology": "Technology",
+      "allCategories": "All categories",
+      "allTechnologies": "All technologies",
+      "reset": "Reset filters",
+      "results": "No projects | 1 project | {count} projects",
+      "empty": "No project matches these filters."
+    }
+  },
+  "caseStudy": {
+    "back": "All projects",
+    "problem": "Problem",
+    "solution": "Solution",
+    "role": "My role",
+    "stack": "Stack",
+    "impact": "Impact",
+    "company": "Company",
+    "period": "Period",
+    "category": "Category",
+    "liveSite": "Live site",
+    "repository": "Repository",
+    "clientWorkNote": "Client work. Visuals are abstract illustrations, not screenshots.",
+    "next": "Next project"
+  },
+  "categories": {
+    "web-application": "Web Application",
+    "mobile-app": "Mobile App",
+    "devops-tooling": "DevOps & Tooling"
+  },
+  "education": {
+    "eyebrow": "Education",
+    "title": "Academic background",
+    "specialization": "Specialization: {name}"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's work together",
+    "intro": "Have a project in mind or a role to discuss? Send me an email, I'll get back to you.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "copyEmail": "Copy email address",
+    "copied": "Copied!"
+  },
+  "footer": {
+    "rights": "© {year} {name}.",
+    "builtWith": "Built with Nuxt and Tailwind CSS."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "text": "The page you're looking for doesn't exist or has moved.",
+    "home": "Back to home",
+    "projects": "Browse projects",
+    "errorTitle": "Something went wrong"
+  },
+  "seo": {
+    "homeTitle": "{name} | Full Stack Developer",
+    "homeDescription": "Full Stack Developer in Tunis building production web applications with Laravel, Vue.js 3 and TypeScript.",
+    "projectsTitle": "Projects | {name}",
+    "projectsDescription": "Case studies of client projects built with Laravel, Vue.js 3, TypeScript, Ionic and more."
   }
 }

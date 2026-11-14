@@ -18,6 +18,9 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  // Folders under components/ are for organisation only: <ProjectCard>, not <ProjectProjectCard>.
+  components: [{ path: '~/components', pathPrefix: false }],
+
   vite: {
     plugins: [tailwindcss()],
   },
