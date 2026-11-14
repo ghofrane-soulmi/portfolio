@@ -1,5 +1,5 @@
 {
-  "hero": {
-    "greeting": "Hi, I'm"
+  "common": {
+    "present": "Present"
   }
 }
