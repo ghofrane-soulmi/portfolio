@@ -39,7 +39,8 @@
   },
   "experience": {
     "eyebrow": "Experience",
-    "title": "Where I've worked"
+    "title": "Where I've worked",
+    "then": ", then "
   },
   "projects": {
     "eyebrow": "Projects",
