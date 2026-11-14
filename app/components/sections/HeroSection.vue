@@ -12,7 +12,7 @@ const { data: profile } = await useProfile()
     />
 
     <div
-      class="mx-auto flex min-h-[calc(100dvh-4rem)] max-w-6xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8"
+      class="mx-auto flex min-h-[min(calc(100dvh-4rem),52rem)] max-w-6xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8"
     >
       <p class="mb-4 font-mono text-sm text-accent sm:text-base">{{ $t('hero.greeting') }}</p>
       <h1
