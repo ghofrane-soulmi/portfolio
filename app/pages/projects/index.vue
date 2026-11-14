@@ -5,6 +5,14 @@ const { projects, technologies, categories } = await useProjects()
 
 const route = useRoute()
 const router = useRouter()
+const { t } = useI18n()
+const { data: profile } = await useProfile()
+
+usePageSeo({
+  title: () => t('seo.projectsTitle', { name: profile.value?.name ?? '' }),
+  description: () => t('seo.projectsDescription'),
+  path: '/projects',
+})
 
 const category = ref<ProjectCategory | null>(null)
 const technology = ref<string | null>(null)

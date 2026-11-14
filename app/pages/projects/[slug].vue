@@ -21,6 +21,14 @@ const isDev = import.meta.dev
 const show = (value: string) => isDev || !isPlaceholder(value)
 
 const period = computed(() => (project.value ? formatPeriod(project.value.period) : undefined))
+
+const { data: profile } = await useProfile()
+usePageSeo({
+  title: () => `${project.value?.title ?? ''} | ${profile.value?.name ?? ''}`,
+  description: () => project.value?.summary ?? '',
+  path: () => `/projects/${slug.value}`,
+  type: 'article',
+})
 </script>
 
 <template>

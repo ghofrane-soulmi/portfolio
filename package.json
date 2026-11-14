@@ -12,7 +12,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "og:image": "node scripts/og-image.mjs"
   },
   "dependencies": {
     "@nuxtjs/color-mode": "^4.1.0",

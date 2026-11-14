@@ -48,6 +48,16 @@ export default defineNuxtConfig({
     name: 'Ghofrane Soulmi',
   },
 
+  sitemap: {
+    // Error pages are not content.
+    exclude: ['/200', '/404'],
+  },
+
+  robots: {
+    // Allow everything; the sitemap URL is added automatically.
+    disallow: [],
+  },
+
   runtimeConfig: {
     public: {
       siteUrl: SITE_URL,
