@@ -105,7 +105,8 @@
     "text": "The page you're looking for doesn't exist or has moved.",
     "home": "Back to home",
     "projects": "Browse projects",
-    "errorTitle": "Something went wrong"
+    "errorTitle": "Something went wrong",
+    "errorText": "An unexpected error occurred. Please try again in a moment."
   },
   "seo": {
     "homeTitle": "{name} | Full Stack Developer",
