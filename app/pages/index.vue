@@ -4,5 +4,6 @@
     <AboutSection />
     <SkillsSection />
     <ExperienceSection />
+    <FeaturedProjectsSection />
   </main>
 </template>
