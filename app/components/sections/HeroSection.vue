@@ -3,11 +3,7 @@ const { data: profile } = await useProfile()
 </script>
 
 <template>
-  <section
-    v-if="profile"
-    aria-labelledby="hero-title"
-    class="relative isolate overflow-hidden"
-  >
+  <section v-if="profile" aria-labelledby="hero-title" class="relative isolate overflow-hidden">
     <!-- Decorative background: grid + soft accent glow -->
     <div aria-hidden="true" class="hero-grid pointer-events-none absolute inset-0 -z-10" />
     <div

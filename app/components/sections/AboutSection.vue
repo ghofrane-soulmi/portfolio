@@ -3,18 +3,16 @@ const { data: profile } = await useProfile()
 </script>
 
 <template>
-  <PageSection
-    v-if="profile"
-    id="about"
-    :eyebrow="$t('about.eyebrow')"
-    :title="$t('about.title')"
-  >
+  <PageSection v-if="profile" id="about" :eyebrow="$t('about.eyebrow')" :title="$t('about.title')">
     <div class="grid gap-10 lg:grid-cols-[1.6fr_1fr] lg:gap-16">
       <p v-reveal class="text-lg leading-relaxed text-muted text-pretty sm:text-xl">
         {{ profile.bio }}
       </p>
 
-      <aside v-reveal="100" class="space-y-6 rounded-2xl border border-border bg-surface p-6 sm:p-8">
+      <aside
+        v-reveal="100"
+        class="space-y-6 rounded-2xl border border-border bg-surface p-6 sm:p-8"
+      >
         <div>
           <h3 class="font-mono text-xs tracking-widest text-muted uppercase">
             {{ $t('about.location') }}
