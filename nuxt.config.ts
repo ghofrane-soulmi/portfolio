@@ -39,7 +39,7 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'en' },
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-      meta: [{ name: 'theme-color', content: '#0b0f14' }],
+      meta: [{ name: 'theme-color', content: '#fff7fa' }],
     },
   },
 
@@ -65,8 +65,8 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    preference: 'dark',
-    fallback: 'dark',
+    preference: 'light',
+    fallback: 'light',
     classSuffix: '',
     storageKey: 'portfolio-color-mode',
   },

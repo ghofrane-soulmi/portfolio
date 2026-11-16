@@ -30,10 +30,20 @@ const fillOf = (f: 'surface' | 'accent' | 'none') =>
         <stop offset="0%" stop-color="var(--c-accent)" stop-opacity="0.35" />
         <stop offset="100%" stop-color="var(--c-accent)" stop-opacity="0" />
       </radialGradient>
+      <radialGradient :id="`glow2-${uid}`">
+        <stop offset="0%" stop-color="var(--c-accent-2)" stop-opacity="0.45" />
+        <stop offset="100%" stop-color="var(--c-accent-2)" stop-opacity="0" />
+      </radialGradient>
     </defs>
 
     <rect :width="COVER_W" :height="COVER_H" fill="var(--c-surface-2)" />
     <rect :width="COVER_W" :height="COVER_H" :fill="`url(#dots-${uid})`" />
+    <circle
+      :cx="COVER_W - cover.glow.cx"
+      :cy="COVER_H - cover.glow.cy"
+      :r="cover.glow.r * 0.9"
+      :fill="`url(#glow2-${uid})`"
+    />
     <circle :cx="cover.glow.cx" :cy="cover.glow.cy" :r="cover.glow.r" :fill="`url(#glow-${uid})`" />
 
     <g stroke="var(--c-accent)" stroke-width="1.5">

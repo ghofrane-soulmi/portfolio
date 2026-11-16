@@ -16,8 +16,8 @@
       }
       body {
         position: relative;
-        background: #0b0f14;
-        color: #e6edf3;
+        background: #fff7fa;
+        color: #2e1a2b;
         font-family:
           'Segoe UI',
           system-ui,
@@ -30,20 +30,30 @@
         position: absolute;
         inset: 0;
         background-image:
-          linear-gradient(to right, #253040 1px, transparent 1px),
-          linear-gradient(to bottom, #253040 1px, transparent 1px);
+          linear-gradient(to right, #f5d5e3 1px, transparent 1px),
+          linear-gradient(to bottom, #f5d5e3 1px, transparent 1px);
         background-size: 56px 56px;
         mask-image: radial-gradient(ellipse at 30% 40%, black 10%, transparent 70%);
-        opacity: 0.55;
+        opacity: 0.7;
       }
       .glow {
         position: absolute;
-        width: 760px;
-        height: 760px;
-        right: -220px;
-        top: -260px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(45, 212, 191, 0.28), transparent 65%);
+        filter: blur(40px);
+      }
+      .glow.rose {
+        width: 620px;
+        height: 620px;
+        left: -180px;
+        top: -260px;
+        background: rgba(190, 24, 93, 0.16);
+      }
+      .glow.lavender {
+        width: 640px;
+        height: 640px;
+        right: -200px;
+        top: -120px;
+        background: rgba(167, 139, 250, 0.32);
       }
       .content {
         position: absolute;
@@ -51,24 +61,31 @@
         top: 110px;
         right: 88px;
       }
-      .mono {
-        font-family: Consolas, 'SFMono-Regular', Menlo, monospace;
-      }
-      .tag {
-        color: #2dd4bf;
-        font-size: 28px;
+      .pill {
+        display: inline-block;
+        padding: 8px 22px;
+        border: 2px solid #f5d5e3;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.75);
+        color: #be185d;
+        font-size: 26px;
+        font-weight: 600;
       }
       h1 {
-        margin: 22px 0 0;
-        font-size: 104px;
-        line-height: 1.02;
+        margin: 28px 0 0;
+        font-size: 108px;
+        line-height: 1.08;
         font-weight: 800;
         letter-spacing: -2px;
+        background: linear-gradient(100deg, #be185d 10%, #6d28d9 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
       p {
-        margin: 26px 0 0;
+        margin: 22px 0 0;
         font-size: 38px;
-        color: #9aa7b4;
+        color: #6e4e64;
       }
       .footer {
         position: absolute;
@@ -78,23 +95,24 @@
         display: flex;
         justify-content: space-between;
         font-size: 24px;
-        color: #9aa7b4;
+        color: #6e4e64;
       }
       .footer b {
-        color: #2dd4bf;
+        color: #be185d;
         font-weight: 600;
       }
     </style>
   </head>
   <body>
     <div class="grid"></div>
-    <div class="glow"></div>
+    <div class="glow rose"></div>
+    <div class="glow lavender"></div>
     <div class="content">
-      <div class="mono tag">&lt;Full Stack Developer /&gt;</div>
+      <span class="pill">✦ Full Stack Developer</span>
       <h1>Ghofrane Soulmi</h1>
       <p>Laravel · Vue.js 3 · TypeScript</p>
     </div>
-    <div class="footer mono">
+    <div class="footer">
       <span>Tunis, Tunisia</span>
       <span><b>Portfolio</b> &amp; case studies</span>
     </div>

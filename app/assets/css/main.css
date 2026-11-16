@@ -7,30 +7,34 @@
  * Design tokens. Light values are the base; `.dark` overrides them.
  * Contrast: text on bg >= 7:1, muted on bg >= 4.5:1, accent on bg >= 4.5:1.
  */
+/* Light (default): blush background, rose accent, lavender for decorative gradients only. */
 :root {
-  --c-bg: #f7f8fa;
+  --c-bg: #fff7fa;
   --c-surface: #ffffff;
-  --c-surface-2: #eef1f4;
-  --c-border: #d9dee4;
-  --c-text: #0f172a;
-  --c-muted: #475569;
-  --c-accent: #0f766e; /* teal-700 */
-  --c-accent-strong: #115e59;
-  --c-accent-soft: #ccfbf1;
+  --c-surface-2: #fdeef4;
+  --c-border: #f5d5e3;
+  --c-text: #2e1a2b;
+  --c-muted: #6e4e64;
+  --c-accent: #be185d; /* rose */
+  --c-accent-strong: #9d174d;
+  --c-accent-soft: #fce7f3;
   --c-on-accent: #ffffff;
+  --c-accent-2: #a78bfa; /* lavender, decorative */
 }
 
+/* Dark: plum background, pink accent. */
 .dark {
-  --c-bg: #0b0f14;
-  --c-surface: #11171e;
-  --c-surface-2: #18202a;
-  --c-border: #253040;
-  --c-text: #e6edf3;
-  --c-muted: #9aa7b4;
-  --c-accent: #2dd4bf; /* teal-400 */
-  --c-accent-strong: #5eead4;
-  --c-accent-soft: #0f2e2b;
-  --c-on-accent: #04201d;
+  --c-bg: #1a1020;
+  --c-surface: #23162b;
+  --c-surface-2: #2d1d37;
+  --c-border: #46294f;
+  --c-text: #fbeaf3;
+  --c-muted: #c9aebf;
+  --c-accent: #f472b6;
+  --c-accent-strong: #f9a8d4;
+  --c-accent-soft: #3d1730;
+  --c-on-accent: #2a0a1c;
+  --c-accent-2: #c4b5fd;
 }
 
 @theme inline {
@@ -44,6 +48,7 @@
   --color-accent-strong: var(--c-accent-strong);
   --color-accent-soft: var(--c-accent-soft);
   --color-on-accent: var(--c-on-accent);
+  --color-accent-2: var(--c-accent-2);
 
   --font-sans:
     ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -81,6 +86,20 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Rose -> violet gradient text for large headings (both ends keep >= 4.5:1 on bg). */
+.text-gradient {
+  background-image: linear-gradient(100deg, var(--c-accent) 10%, var(--c-grad-end) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+:root {
+  --c-grad-end: #6d28d9;
+}
+.dark {
+  --c-grad-end: #c4b5fd;
 }
 
 /* Scroll reveal (see app/plugins/reveal.ts) */

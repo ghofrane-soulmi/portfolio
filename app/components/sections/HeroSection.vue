@@ -4,20 +4,29 @@ const { data: profile } = await useProfile()
 
 <template>
   <section v-if="profile" aria-labelledby="hero-title" class="relative isolate overflow-hidden">
-    <!-- Decorative background: grid + soft accent glow -->
+    <!-- Decorative background: soft grid + rose and lavender glows -->
     <div aria-hidden="true" class="hero-grid pointer-events-none absolute inset-0 -z-10" />
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute -top-40 left-1/2 -z-10 size-[42rem] -translate-x-1/2 rounded-full bg-accent/15 blur-3xl"
+      class="pointer-events-none absolute -top-32 -left-24 -z-10 size-[34rem] rounded-full bg-accent/15 blur-3xl"
+    />
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute top-10 -right-24 -z-10 size-[30rem] rounded-full bg-accent-2/25 blur-3xl"
     />
 
     <div
       class="mx-auto flex min-h-[min(calc(100dvh-4rem),52rem)] max-w-6xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8"
     >
-      <p class="mb-4 font-mono text-sm text-accent sm:text-base">{{ $t('hero.greeting') }}</p>
+      <p
+        class="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-surface/70 px-4 py-1.5 text-sm font-medium text-accent backdrop-blur"
+      >
+        <span aria-hidden="true">✦</span>
+        {{ $t('hero.greeting') }}
+      </p>
       <h1
         id="hero-title"
-        class="text-5xl leading-[1.05] font-extrabold tracking-tight text-balance sm:text-7xl lg:text-8xl"
+        class="text-gradient text-5xl leading-[1.1] font-extrabold tracking-tight text-balance sm:text-7xl lg:text-8xl"
       >
         {{ profile.name }}
       </h1>
@@ -46,7 +55,7 @@ const { data: profile } = await useProfile()
     linear-gradient(to right, var(--c-border) 1px, transparent 1px),
     linear-gradient(to bottom, var(--c-border) 1px, transparent 1px);
   background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 70%);
-  opacity: 0.45;
+  mask-image: radial-gradient(ellipse at 50% 30%, black 15%, transparent 65%);
+  opacity: 0.5;
 }
 </style>
