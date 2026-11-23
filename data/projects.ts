@@ -124,7 +124,7 @@ export const projects: Project[] = [
     summary:
       'Open-source dashboard that deploys Laravel apps to your own VPS over SSH, aiming for zero-downtime releases, live logs and one-click rollback. Server and project management are built; the deploy pipeline is next.',
     problem:
-      'Many Laravel developers host on a plain VPS and deploy by hand over SSH or with fragile scripts: downtime during releases, no rollback, no logs. The hosted alternatives cost a monthly fee per server.',
+      'Many Laravel developers host on a plain VPS and deploy by hand over SSH or with fragile scripts: downtime during releases, no rollback, no logs. The hosted alternatives cost a monthly fee per server. Pushpilot builds on the Git push-to-deploy pipeline I built and ran in production at Iberis → Travel To Do, which cut release turnaround to under 10 minutes, and turns it into a reusable open-source tool.',
     solution:
       'A self-hosted Laravel 12 + Vue 3 app. Built so far: a first-run owner setup, server management with ed25519 SSH keys generated per server, a connection test and a requirements check (Git, PHP, Composer, Node, PHP-FPM), and projects with per-project deploy keys, a write-only encrypted .env editor and one-click initialization of the release folders on the server. All SSH goes through one interface, so the code is tested with a fake client and against a real Ubuntu test server in Docker. Next: the release pipeline with an atomic symlink switch, live logs over WebSockets, GitHub webhooks and rollback.',
     impact: [
@@ -240,28 +240,6 @@ export const projects: Project[] = [
     category: 'web-application',
     company: placeholder('company for Event and Forum Live Platform'),
     period: periodTbd('Event and Forum Live Platform'),
-    images: [],
-    featured: false,
-  },
-  {
-    id: 'push-to-deploy-pipeline',
-    slug: 'push-to-deploy-pipeline',
-    title: 'Push-to-Deploy Pipeline and Monitoring',
-    summary:
-      'Git push-to-deploy on a Linux VPS with cron jobs, Discord release alerts and Sentry + Slack error alerting.',
-    problem: problemTbd('Push-to-Deploy Pipeline and Monitoring'),
-    solution:
-      'Built a Git push-to-deploy pipeline on a Linux VPS with cron jobs and Discord webhook release alerts. Integrated Sentry with Slack alerting for production error tracing, and wrote Python scripts covering regression workflows.',
-    impact: [
-      'Releases in under 10 minutes',
-      'Estimated 40% faster bug triage with Sentry + Slack alerting',
-      'Python scripts covering 15+ regression workflows',
-    ],
-    role: ROLE,
-    stack: ['Git', 'Linux VPS', 'cron', 'Discord webhooks', 'Sentry', 'Slack'],
-    category: 'devops-tooling',
-    company: IBERIS,
-    period: periodTbd('Push-to-Deploy Pipeline and Monitoring'),
     images: [],
     featured: false,
   },
