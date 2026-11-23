@@ -155,7 +155,8 @@ usePageSeo({
           <ProjectCover :slug="project.slug" :category="project.category" :stack="project.stack" />
         </div>
         <figcaption class="mt-3 text-xs text-muted">
-          {{ $t('caseStudy.clientWorkNote') }}
+          <!-- Public code = personal project (screenshots not added yet); otherwise client work. -->
+          {{ project.repoUrl ? $t('caseStudy.illustrationNote') : $t('caseStudy.clientWorkNote') }}
         </figcaption>
       </figure>
 

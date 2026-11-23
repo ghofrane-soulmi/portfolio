@@ -2,9 +2,8 @@ import type { Period, Project } from '../shared/types'
 import { placeholder } from '../shared/utils/placeholder'
 
 /*
- * Bookly (first two entries) is a personal project: real screenshots, live
- * demos and public code. Everything after it is client work, written as case
- * studies:
+ * Bookly (first two entries) and Pushpilot are personal projects with public
+ * code. Everything after them is client work, written as case studies:
  * - No client names in titles.
  * - No real screenshots: `images` stays empty and an abstract cover is generated.
  * - "estimated" is kept wherever it appears in the source material.
@@ -117,6 +116,43 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    // In progress: only list what is built. Update as milestones land
+    // (pipeline, live logs, rollback, then add screenshots and a live demo).
+    id: 'pushpilot',
+    slug: 'pushpilot',
+    title: 'Pushpilot: Self-Hosted Laravel Deployments (in progress)',
+    summary:
+      'Open-source dashboard that deploys Laravel apps to your own VPS over SSH, aiming for zero-downtime releases, live logs and one-click rollback. Server and project management are built; the deploy pipeline is next.',
+    problem:
+      'Many Laravel developers host on a plain VPS and deploy by hand over SSH or with fragile scripts: downtime during releases, no rollback, no logs. The hosted alternatives cost a monthly fee per server.',
+    solution:
+      'A self-hosted Laravel 12 + Vue 3 app. Built so far: a first-run owner setup, server management with ed25519 SSH keys generated per server, a connection test and a requirements check (Git, PHP, Composer, Node, PHP-FPM), and projects with per-project deploy keys, a write-only encrypted .env editor and one-click initialization of the release folders on the server. All SSH goes through one interface, so the code is tested with a fake client and against a real Ubuntu test server in Docker. Next: the release pipeline with an atomic symlink switch, live logs over WebSockets, GitHub webhooks and rollback.',
+    impact: [
+      '122 automated tests, including real SSH tests against a Docker test server in CI',
+      'SSH keys, deploy keys and .env stored encrypted and never sent back to the browser',
+      'Written specification with 50+ numbered requirements and a public roadmap',
+    ],
+    role: 'Solo: specification, architecture, back end, front end and CI',
+    stack: [
+      'Laravel 12',
+      'Vue.js 3',
+      'TypeScript',
+      'Inertia',
+      'Laravel Reverb',
+      'Redis',
+      'PostgreSQL',
+      'phpseclib',
+      'Docker',
+      'GitHub Actions',
+    ],
+    category: 'devops-tooling',
+    company: 'Personal project (open source)',
+    period: { start: '2026-11', end: null },
+    images: [],
+    repoUrl: 'https://github.com/ghofrane-soulmi/pushpilot',
+    featured: true,
+  },
+  {
     id: 'hr-management-platform',
     slug: 'hr-management-platform',
     title: 'HR Management Platform',
@@ -153,7 +189,7 @@ export const projects: Project[] = [
     company: placeholder('company for Maintenance Helpdesk'),
     period: periodTbd('Maintenance Helpdesk'),
     images: [],
-    featured: true,
+    featured: false,
   },
   {
     id: 'hotel-voucher-scanning-app',

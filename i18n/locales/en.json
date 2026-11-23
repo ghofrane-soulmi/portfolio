@@ -56,7 +56,7 @@
     "liveDemo": "Live demo",
     "code": "GitHub",
     "allTitle": "All projects",
-    "allIntro": "A personal SaaS with live demos, plus client work across HR technology, travel operations and financial services, written up as case studies.",
+    "allIntro": "Personal projects with public code and live demos, plus client work across HR technology, travel operations and financial services, written up as case studies.",
     "filters": {
       "label": "Filter projects",
       "category": "Category",
@@ -82,6 +82,7 @@
     "repository": "GitHub",
     "screenshots": "Screenshots",
     "clientWorkNote": "Client work. Visuals are abstract illustrations, not screenshots.",
+    "illustrationNote": "Abstract illustration. Screenshots will be added as the project progresses.",
     "next": "Next project"
   },
   "categories": {
