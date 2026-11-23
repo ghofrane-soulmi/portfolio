@@ -1,5 +1,4 @@
 import type { Profile } from '../shared/types'
-import { placeholder } from '../shared/utils/placeholder'
 
 export const profile: Profile = {
   name: 'Ghofrane Soulmi',
@@ -18,8 +17,8 @@ export const profile: Profile = {
   ],
   links: {
     email: 'ghofranesoulmi@gmail.com',
-    linkedin: placeholder('LinkedIn profile URL'),
-    github: placeholder('GitHub profile URL'),
+    linkedin: 'https://www.linkedin.com/in/ghofrane-soulmi-366a241b2/',
+    github: 'https://github.com/ghofrane-soulmi',
   },
   // Add the file at /public/cv.pdf
   cvUrl: '/cv.pdf',

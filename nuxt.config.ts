@@ -38,8 +38,25 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap',
+        },
+      ],
       meta: [{ name: 'theme-color', content: '#fff7fa' }],
+      script: [
+        {
+          // Show the intro loader (components/layout/SiteLoader.vue) only when JS
+          // runs. The 4 s timeout guarantees it can never get stuck.
+          innerHTML:
+            "document.documentElement.classList.add('is-loading');setTimeout(function(){document.documentElement.classList.remove('is-loading','is-loaded')},4000)",
+          tagPosition: 'head',
+        },
+      ],
     },
   },
 

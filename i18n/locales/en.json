@@ -23,6 +23,12 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
+    "iam": "I'm",
+    "available": "Open to new opportunities",
+    "tagline": "Crafting elegant, reliable web apps",
+    "intro": "Full Stack Developer with 3+ years of experience. I build production apps with Laravel and Vue.js 3: clean APIs, secure auth, real-time features and polished interfaces.",
+    "scroll": "Scroll to learn more",
+    "social": "Find me online",
     "viewProjects": "View projects",
     "downloadCv": "Download CV",
     "contactMe": "Get in touch"
@@ -47,8 +53,10 @@
     "featuredTitle": "Selected case studies",
     "viewAll": "View all projects",
     "readCaseStudy": "Read case study",
+    "liveDemo": "Live demo",
+    "code": "GitHub",
     "allTitle": "All projects",
-    "allIntro": "Client work across HR technology, travel operations and financial services, written up as case studies.",
+    "allIntro": "A personal SaaS with live demos, plus client work across HR technology, travel operations and financial services, written up as case studies.",
     "filters": {
       "label": "Filter projects",
       "category": "Category",
@@ -70,8 +78,9 @@
     "company": "Company",
     "period": "Period",
     "category": "Category",
-    "liveSite": "Live site",
-    "repository": "Repository",
+    "liveSite": "Live demo",
+    "repository": "GitHub",
+    "screenshots": "Screenshots",
     "clientWorkNote": "Client work. Visuals are abstract illustrations, not screenshots.",
     "next": "Next project"
   },

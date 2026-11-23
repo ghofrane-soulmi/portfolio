@@ -8,7 +8,7 @@ const { featured } = await useProjects()
     :eyebrow="$t('projects.eyebrow')"
     :title="$t('projects.featuredTitle')"
   >
-    <ul class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <ul class="grid gap-8 md:grid-cols-2">
       <li v-for="(project, index) in featured" :key="project.id" v-reveal="index * 100">
         <ProjectCard :project="project" />
       </li>

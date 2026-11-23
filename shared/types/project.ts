@@ -21,5 +21,12 @@ export interface Project {
   images: ImageAsset[]
   liveUrl?: string
   repoUrl?: string
+  /** More links shown on the case study page (e.g. a related repository). */
+  extraLinks?: ProjectLink[]
   featured: boolean
+}
+
+export interface ProjectLink {
+  label: string
+  href: string
 }

@@ -85,7 +85,10 @@ usePageSeo({
           </div>
         </dl>
 
-        <div v-if="project.liveUrl || project.repoUrl" class="mt-6 flex flex-wrap gap-3">
+        <div
+          v-if="project.liveUrl || project.repoUrl || project.extraLinks?.length"
+          class="mt-6 flex flex-wrap gap-3"
+        >
           <AppButton v-if="project.liveUrl" :href="project.liveUrl" external icon="external">
             {{ $t('caseStudy.liveSite') }}
           </AppButton>
@@ -99,10 +102,53 @@ usePageSeo({
           >
             {{ $t('caseStudy.repository') }}
           </AppButton>
+          <AppButton
+            v-for="link in project.extraLinks"
+            :key="link.href"
+            :href="link.href"
+            external
+            variant="ghost"
+            icon="github"
+            icon-position="left"
+          >
+            {{ link.label }}
+          </AppButton>
         </div>
       </header>
 
-      <figure class="mx-auto mt-12 max-w-6xl px-4 sm:px-6 lg:px-8">
+      <!-- Real screenshots when the project has them, otherwise an abstract cover. -->
+      <section
+        v-if="project.images.length"
+        :aria-label="$t('caseStudy.screenshots')"
+        class="mx-auto mt-12 max-w-6xl px-4 sm:px-6 lg:px-8"
+      >
+        <figure
+          class="overflow-hidden rounded-3xl border border-border bg-surface shadow-[0_30px_60px_-30px_rgb(190_24_93/0.35)]"
+        >
+          <img
+            :src="project.images[0]!.src"
+            :alt="project.images[0]!.alt"
+            class="w-full"
+            fetchpriority="high"
+          />
+        </figure>
+        <div v-if="project.images.length > 1" class="mt-6 grid gap-6 sm:grid-cols-2">
+          <figure
+            v-for="image in project.images.slice(1)"
+            :key="image.src"
+            class="flex items-start justify-center overflow-hidden rounded-3xl border border-border bg-surface-2"
+          >
+            <img
+              :src="image.src"
+              :alt="image.alt"
+              loading="lazy"
+              decoding="async"
+              class="max-h-[28rem] w-full object-contain object-top"
+            />
+          </figure>
+        </div>
+      </section>
+      <figure v-else class="mx-auto mt-12 max-w-6xl px-4 sm:px-6 lg:px-8">
         <div
           class="aspect-[16/9] overflow-hidden rounded-3xl border border-border sm:aspect-[21/9]"
         >
