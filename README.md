@@ -62,7 +62,7 @@ data/            Content: profile, projects, experience, education, skills
 shared/types/    Content types (Project, Experience, Education, SkillGroup, Profile)
 shared/utils/    placeholder helpers
 i18n/locales/    All UI text (en.json)
-public/          favicon, og-image.png, cv.pdf
+public/          favicon, og-image.png, Ghofrane_Soulmi_Resume.pdf
 scripts/         OG image source + render script
 ```
 
@@ -106,4 +106,5 @@ git grep -n "placeholder("
 
 ## CV
 
-Place your CV at `public/cv.pdf`. The "Download CV" buttons already point to it.
+The CV lives at `public/Ghofrane_Soulmi_Resume.pdf` (that file name is what visitors download).
+The "Download CV" buttons use `cvUrl` in `data/profile.ts`.

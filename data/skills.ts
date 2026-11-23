@@ -17,7 +17,17 @@ export const skillGroups: SkillGroup[] = [
   {
     id: 'front-end',
     title: 'Front-end',
-    skills: ['Ionic Vue', 'Angular', 'Laravel Livewire', 'Bootstrap', 'Chart.js', 'HTML5', 'CSS3'],
+    skills: [
+      'Nuxt',
+      'Tailwind CSS',
+      'Ionic Vue',
+      'Angular',
+      'Laravel Livewire',
+      'Bootstrap',
+      'Chart.js',
+      'HTML5',
+      'CSS3',
+    ],
   },
   {
     id: 'deployment-tools',

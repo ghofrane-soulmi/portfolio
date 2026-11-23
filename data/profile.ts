@@ -20,6 +20,6 @@ export const profile: Profile = {
     linkedin: 'https://www.linkedin.com/in/ghofrane-soulmi-366a241b2/',
     github: 'https://github.com/ghofrane-soulmi',
   },
-  // Add the file at /public/cv.pdf
-  cvUrl: '/cv.pdf',
+  // File in /public; its name is the name visitors get when they download it.
+  cvUrl: '/Ghofrane_Soulmi_Resume.pdf',
 }
